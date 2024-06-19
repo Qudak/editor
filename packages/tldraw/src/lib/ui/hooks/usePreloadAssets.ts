@@ -8,7 +8,6 @@ export type TLTypeFace = {
 	stretch?: string
 	style?: string
 	unicodeRange?: string
-	variant?: string
 	weight?: string
 }
 
@@ -37,7 +36,6 @@ const usePreloadFont = (id: string, font: TLTypeFace): PreloadStatus => {
 			featureSettings,
 			stretch,
 			unicodeRange,
-			variant,
 		} = font
 
 		let cancelled = false
@@ -50,7 +48,6 @@ const usePreloadFont = (id: string, font: TLTypeFace): PreloadStatus => {
 			featureSettings,
 			stretch,
 			unicodeRange,
-			variant,
 		}
 
 		const fontInstance = new FontFace(id, `url(${url})`, descriptors)

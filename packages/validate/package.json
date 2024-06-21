@@ -1,7 +1,7 @@
 {
 	"name": "@tldraw/validate",
 	"description": "A runtime validation library by tldraw.",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"packageManager": "yarn@3.5.0",
 	"author": {
 		"name": "tldraw GB Ltd.",
@@ -41,7 +41,7 @@
 		"lint": "yarn run -T tsx ../../scripts/lint.ts"
 	},
 	"dependencies": {
-		"@tldraw/utils": "1.0.0"
+		"@tldraw/utils": "^1.0.1"
 	},
 	"jest": {
 		"preset": "config/jest/node",

@@ -1,7 +1,7 @@
 {
 	"name": "@tldraw/store",
 	"description": "A tiny little drawing app (store).",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"packageManager": "yarn@3.5.0",
 	"author": {
 		"name": "tldraw GB Ltd.",
@@ -41,8 +41,8 @@
 		"lint": "yarn run -T tsx ../../scripts/lint.ts"
 	},
 	"dependencies": {
-		"@tldraw/state": "1.0.0",
-		"@tldraw/utils": "1.0.0",
+		"@tldraw/state": "^1.0.1",
+		"@tldraw/utils": "^1.0.1",
 		"lodash.isequal": "^4.5.0",
 		"nanoid": "4.0.2"
 	},

@@ -52,7 +52,7 @@
 		"@radix-ui/react-select": "^1.2.0",
 		"@radix-ui/react-slider": "^1.1.0",
 		"@radix-ui/react-toast": "^1.1.1",
-		"@tldraw/editor": "workspace:*",
+		"@tldraw/editor": "1.0.0",
 		"canvas-size": "^1.2.6",
 		"classnames": "^2.3.2",
 		"downscale": "^1.0.6",
@@ -101,5 +101,6 @@
 		"setupFilesAfterEnv": [
 			"../../config/setupJest.ts"
 		]
-	}
+	},
+	"gitHead": "297cc2d64c620bffd5228074f18929df0cc11250"
 }

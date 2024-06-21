@@ -56,10 +56,11 @@
 		]
 	},
 	"dependencies": {
-		"@tldraw/state": "workspace:*",
-		"@tldraw/store": "workspace:*",
-		"@tldraw/utils": "workspace:*",
-		"@tldraw/validate": "workspace:*",
+		"@tldraw/state": "1.0.0",
+		"@tldraw/store": "1.0.0",
+		"@tldraw/utils": "1.0.0",
+		"@tldraw/validate": "1.0.0",
 		"nanoid": "4.0.2"
-	}
+	},
+	"gitHead": "297cc2d64c620bffd5228074f18929df0cc11250"
 }

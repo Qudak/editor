@@ -33,6 +33,7 @@
 		"scripts"
 	],
 	"scripts": {
+    "postinstall": "build-package",
 		"clean": "scripts/clean.sh",
 		"refresh-assets": "lazy refresh-assets",
 		"build": "lazy build",

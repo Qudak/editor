@@ -52,6 +52,8 @@ export type Expand<T> = T extends infer O ? {
 export class FileHelpers {
     // @internal (undocumented)
     static base64ToFile(dataURL: string): Promise<ArrayBuffer>;
+    // (undocumented)
+    static blobToDataUrl(blob: Blob): string;
     static fileToBase64(file: Blob): Promise<string>;
 }
 
@@ -127,6 +129,11 @@ export function mapObjectMapValues<Key extends string, ValueBefore, ValueAfter>(
 
 // @public
 export class MediaHelpers {
+    // (undocumented)
+    static getImageSize(file: File): Promise<{
+        w: number;
+        h: number;
+    }>;
     static getImageSizeFromSrc(dataURL: string): Promise<{
         w: number;
         h: number;

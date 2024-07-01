@@ -519,6 +519,55 @@
           "members": [
             {
               "kind": "Method",
+              "canonicalReference": "@tldraw/utils!FileHelpers.blobToDataUrl:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static blobToDataUrl(blob: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Blob",
+                  "canonicalReference": "!Blob:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "blob",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "blobToDataUrl"
+            },
+            {
+              "kind": "Method",
               "canonicalReference": "@tldraw/utils!FileHelpers.fileToBase64:member(1)",
               "docComment": "/**\n * Convert a file to base64.\n *\n * @param value - The file as a blob.\n *\n * @example\n * ```ts\n * const A = fileToBase64('./test.png')\n * ```\n *\n * @public\n */\n",
               "excerptTokens": [
@@ -1289,6 +1338,60 @@
           "name": "MediaHelpers",
           "preserveMemberOrder": false,
           "members": [
+            {
+              "kind": "Method",
+              "canonicalReference": "@tldraw/utils!MediaHelpers.getImageSize:member(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "static getImageSize(file: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "File",
+                  "canonicalReference": "!File:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<{\n        w: number;\n        h: number;\n    }>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": true,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "file",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "getImageSize"
+            },
             {
               "kind": "Method",
               "canonicalReference": "@tldraw/utils!MediaHelpers.getImageSizeFromSrc:member(1)",

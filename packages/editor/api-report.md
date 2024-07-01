@@ -653,7 +653,10 @@ export class Editor extends EventEmitter<TLEventMap> {
     getAsset(asset: TLAsset | TLAssetId): TLAsset | undefined;
     getAssetForExternalContent(info: TLExternalAssetContent): Promise<TLAsset | undefined>;
     getAssets(): (TLBookmarkAsset | TLImageAsset | TLVideoAsset)[];
+    // (undocumented)
+    getBaseZoom(): number;
     getCamera(): TLCamera;
+    getCameraOptions(): TLCameraOptions;
     getCameraState(): "idle" | "moving";
     getCanRedo(): boolean;
     getCanUndo(): boolean;
@@ -686,6 +689,8 @@ export class Editor extends EventEmitter<TLEventMap> {
     getHoveredShape(): TLShape | undefined;
     getHoveredShapeId(): null | TLShapeId;
     getInitialMetaForShape(_shape: TLShape): JsonObject;
+    // (undocumented)
+    getInitialZoom(): number;
     getInstanceState(): TLInstance;
     getIsMenuOpen(): boolean;
     getOnlySelectedShape(): null | TLShape;
@@ -808,6 +813,8 @@ export class Editor extends EventEmitter<TLEventMap> {
         y: number;
         z: number;
     };
+    // (undocumented)
+    pageToViewport(point: VecLike): Vec2d;
     pan(offset: VecLike, animation?: TLAnimationOptions): this;
     panZoomIntoView(ids: TLShapeId[], animation?: TLAnimationOptions): this;
     popFocusedGroupId(): this;
@@ -843,7 +850,9 @@ export class Editor extends EventEmitter<TLEventMap> {
     selectNone(): this;
     sendBackward(shapes: TLShape[] | TLShapeId[]): this;
     sendToBack(shapes: TLShape[] | TLShapeId[]): this;
-    setCamera(point: VecLike, animation?: TLAnimationOptions): this;
+    setCamera(point: VecLike, opts?: TLCameraMoveOptions): this;
+    // (undocumented)
+    setCameraOptions(options: Partial<TLCameraOptions>): this;
     setCroppingShape(shape: null | TLShape | TLShapeId): this;
     setCurrentPage(page: TLPage | TLPageId, historyOptions?: TLCommandHistoryOptions): this;
     setCurrentTool(id: string, info?: {}): this;

@@ -1,4 +1,3 @@
-import { computed } from '@tldraw/state'
 import {
 	TLUserPreferences,
 	defaultUserPreferences,
@@ -15,7 +14,7 @@ export class UserPreferencesManager {
 			...userPreferences,
 		})
 	}
-	@computed getUserPreferences() {
+	getUserPreferences() {
 		return {
 			id: this.getId(),
 			name: this.getName(),
@@ -26,7 +25,7 @@ export class UserPreferencesManager {
 			isSnapMode: this.getIsSnapMode(),
 		}
 	}
-	@computed getIsDarkMode() {
+	getIsDarkMode() {
 		return (
 			this.user.userPreferences.get().isDarkMode ??
 			(this.inferDarkMode ? userPrefersDarkUI() : false)
@@ -36,31 +35,31 @@ export class UserPreferencesManager {
 	/**
 	 * The speed at which the user can scroll by dragging toward the edge of the screen.
 	 */
-	@computed getEdgeScrollSpeed() {
+	getEdgeScrollSpeed() {
 		return this.user.userPreferences.get().edgeScrollSpeed ?? defaultUserPreferences.edgeScrollSpeed
 	}
 
-	@computed getAnimationSpeed() {
+	getAnimationSpeed() {
 		return this.user.userPreferences.get().animationSpeed ?? defaultUserPreferences.animationSpeed
 	}
 
-	@computed getId() {
+	getId() {
 		return this.user.userPreferences.get().id
 	}
 
-	@computed getName() {
+	getName() {
 		return this.user.userPreferences.get().name ?? defaultUserPreferences.name
 	}
 
-	@computed getLocale() {
+	getLocale() {
 		return this.user.userPreferences.get().locale ?? defaultUserPreferences.locale
 	}
 
-	@computed getColor() {
+	getColor() {
 		return this.user.userPreferences.get().color ?? defaultUserPreferences.color
 	}
 
-	@computed getIsSnapMode() {
+	getIsSnapMode() {
 		return this.user.userPreferences.get().isSnapMode ?? defaultUserPreferences.isSnapMode
 	}
 }

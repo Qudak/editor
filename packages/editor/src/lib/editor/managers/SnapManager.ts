@@ -1,4 +1,4 @@
-import { atom, computed, EMPTY_ARRAY } from '@tldraw/state'
+import { atom, EMPTY_ARRAY } from '@tldraw/state'
 import { TLGroupShape, TLParentId, TLShape, TLShapeId, Vec2dModel } from '@tldraw/tlschema'
 import { dedupe, deepCopy } from '@tldraw/utils'
 import {
@@ -228,7 +228,7 @@ export class SnapManager {
 
 	constructor(public readonly editor: Editor) {}
 
-	@computed getSnapPointsCache() {
+	getSnapPointsCache() {
 		const { editor } = this
 		return editor.store.createComputedCache<SnapPoint[], TLShape>('snapPoints', (shape) => {
 			const pageTransfrorm = editor.getShapePageTransform(shape.id)
@@ -241,12 +241,12 @@ export class SnapManager {
 		})
 	}
 
-	@computed getSnapThreshold() {
+	getSnapThreshold() {
 		return 8 / this.editor.getZoomLevel()
 	}
 
 	// TODO: make this an incremental derivation
-	@computed getSnappableShapes(): GapNode[] {
+	getSnappableShapes(): GapNode[] {
 		const { editor } = this
 		const renderingBounds = editor.getRenderingBounds()
 		const selectedShapeIds = editor.getSelectedShapeIds()
@@ -285,12 +285,12 @@ export class SnapManager {
 	}
 
 	// This needs to be external from any expensive work
-	@computed getCurrentCommonAncestor() {
+	getCurrentCommonAncestor() {
 		return this.editor.findCommonAncestor(this.editor.getSelectedShapes())
 	}
 
 	// Points which belong to snappable shapes
-	@computed getSnappablePoints() {
+	getSnappablePoints() {
 		const snapPointsCache = this.getSnapPointsCache()
 		const snappableShapes = this.getSnappableShapes()
 		const result: SnapPoint[] = []
@@ -305,7 +305,7 @@ export class SnapManager {
 		return result
 	}
 
-	@computed getVisibleGaps(): { horizontal: Gap[]; vertical: Gap[] } {
+	getVisibleGaps(): { horizontal: Gap[]; vertical: Gap[] } {
 		const horizontal: Gap[] = []
 		const vertical: Gap[] = []
 
@@ -495,7 +495,7 @@ export class SnapManager {
 		return { nudge }
 	}
 
-	@computed getOutlinesInPageSpace() {
+	getOutlinesInPageSpace() {
 		return this.getSnappableShapes().map(({ id, isClosed }) => {
 			const outline = deepCopy(this.editor.getShapeGeometry(id).vertices)
 			if (isClosed) outline.push(outline[0])

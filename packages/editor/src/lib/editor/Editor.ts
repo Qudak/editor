@@ -809,7 +809,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getCanUndo(): boolean {
+	getCanUndo(): boolean {
 		return this.history.getNumUndos() > 0
 	}
 
@@ -833,7 +833,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getCanRedo(): boolean {
+	getCanRedo(): boolean {
 		return this.history.getNumRedos() > 0
 	}
 
@@ -914,7 +914,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	// todo: move these to tldraw or replace with a bindings API
 
 	/** @internal */
-	@computed
+
 	private _getArrowBindingsIndex() {
 		return arrowBindingsIndex(this)
 	}
@@ -930,7 +930,6 @@ export class Editor extends EventEmitter<TLEventMap> {
 		return this._getArrowBindingsIndex().get()[shapeId] || EMPTY_ARRAY
 	}
 
-	@computed
 	private getArrowInfoCache() {
 		return this.store.createComputedCache<TLArrowInfo, TLArrowShape>('arrow infoCache', (shape) => {
 			return getIsArrowStraight(shape)
@@ -1058,7 +1057,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getPath() {
+	getPath() {
 		return this.root.getPath().split('root.')[1]
 	}
 
@@ -1130,7 +1129,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getCurrentTool(): StateNode {
+	getCurrentTool(): StateNode {
 		return this.root.getCurrent()!
 	}
 
@@ -1139,7 +1138,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getCurrentToolId(): string {
+	getCurrentToolId(): string {
 		const currentTool = this.getCurrentTool()
 		if (!currentTool) return ''
 		return currentTool.getCurrentToolIdMask() ?? currentTool.id
@@ -1178,7 +1177,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 **/
-	@computed getDocumentSettings() {
+	getDocumentSettings() {
 		return this.store.get(TLDOCUMENT_ID)!
 	}
 
@@ -1199,7 +1198,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getInstanceState(): TLInstance {
+	getInstanceState(): TLInstance {
 		return this.store.get(TLINSTANCE_ID)!
 	}
 
@@ -1276,7 +1275,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getOpenMenus(): string[] {
+	getOpenMenus(): string[] {
 		return this.getInstanceState().openMenus
 	}
 
@@ -1328,7 +1327,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getIsMenuOpen(): boolean {
+	getIsMenuOpen(): boolean {
 		return this.getOpenMenus().length > 0
 	}
 
@@ -1357,12 +1356,12 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getPageStates(): TLInstancePageState[] {
+	getPageStates(): TLInstancePageState[] {
 		return this._getPageStatesQuery().get()
 	}
 
 	/** @internal */
-	@computed private _getPageStatesQuery() {
+	private _getPageStatesQuery() {
 		return this.store.query.records('instance_page_state')
 	}
 
@@ -1371,12 +1370,12 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getCurrentPageState(): TLInstancePageState {
+	getCurrentPageState(): TLInstancePageState {
 		return this.store.get(this._getCurrentPageStateId())!
 	}
 
 	/** @internal */
-	@computed private _getCurrentPageStateId() {
+	private _getCurrentPageStateId() {
 		return InstancePageStateRecordType.createId(this.getCurrentPageId())
 	}
 
@@ -1429,7 +1428,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getSelectedShapeIds() {
+	getSelectedShapeIds() {
 		return this.getCurrentPageState().selectedShapeIds
 	}
 
@@ -1439,7 +1438,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 * @public
 	 * @readonly
 	 */
-	@computed getSelectedShapes(): TLShape[] {
+	getSelectedShapes(): TLShape[] {
 		const { selectedShapeIds } = this.getCurrentPageState()
 		return compact(selectedShapeIds.map((id) => this.store.get(id)))
 	}
@@ -1608,7 +1607,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 * @public
 	 * @readonly
 	 */
-	@computed getOnlySelectedShape(): TLShape | null {
+	getOnlySelectedShape(): TLShape | null {
 		const selectedShapes = this.getSelectedShapes()
 		return selectedShapes.length === 1 ? selectedShapes[0] : null
 	}
@@ -1622,7 +1621,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getSelectionPageBounds(): Box2d | null {
+	getSelectionPageBounds(): Box2d | null {
 		const selectedShapeIds = this.getCurrentPageState().selectedShapeIds
 		if (selectedShapeIds.length === 0) return null
 
@@ -1635,7 +1634,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 * @readonly
 	 * @public
 	 */
-	@computed getSelectionRotation(): number {
+	getSelectionRotation(): number {
 		const selectedShapeIds = this.getSelectedShapeIds()
 		if (selectedShapeIds.length === 0) {
 			return 0
@@ -1657,7 +1656,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 * @readonly
 	 * @public
 	 */
-	@computed getSelectionRotatedPageBounds(): Box2d | undefined {
+	getSelectionRotatedPageBounds(): Box2d | undefined {
 		const selectedShapeIds = this.getSelectedShapeIds()
 
 		if (selectedShapeIds.length === 0) {
@@ -1698,7 +1697,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getFocusedGroupId(): TLShapeId | TLPageId {
+	getFocusedGroupId(): TLShapeId | TLPageId {
 		return this.getCurrentPageState().focusedGroupId ?? this.getCurrentPageId()
 	}
 
@@ -1707,7 +1706,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getFocusedGroup(): TLShape | undefined {
+	getFocusedGroup(): TLShape | undefined {
 		const focusedGroupId = this.getFocusedGroupId()
 		return focusedGroupId ? this.getShape(focusedGroupId) : undefined
 	}
@@ -1798,7 +1797,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getEditingShapeId(): TLShapeId | null {
+	getEditingShapeId(): TLShapeId | null {
 		return this.getCurrentPageState().editingShapeId
 	}
 
@@ -1807,7 +1806,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getEditingShape(): TLShape | undefined {
+	getEditingShape(): TLShape | undefined {
 		const editingShapeId = this.getEditingShapeId()
 		return editingShapeId ? this.getShape(editingShapeId) : undefined
 	}
@@ -1850,7 +1849,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 * @readonly
 	 * @public
 	 */
-	@computed getHoveredShapeId(): TLShapeId | null {
+	getHoveredShapeId(): TLShapeId | null {
 		return this.getCurrentPageState().hoveredShapeId
 	}
 
@@ -1859,7 +1858,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getHoveredShape(): TLShape | undefined {
+	getHoveredShape(): TLShape | undefined {
 		const hoveredShapeId = this.getHoveredShapeId()
 		return hoveredShapeId ? this.getShape(hoveredShapeId) : undefined
 	}
@@ -1890,7 +1889,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getHintingShapeIds() {
+	getHintingShapeIds() {
 		return this.getCurrentPageState().hintingShapeIds
 	}
 	/**
@@ -1898,7 +1897,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getHintingShape() {
+	getHintingShape() {
 		const hintingShapeIds = this.getHintingShapeIds()
 		return compact(hintingShapeIds.map((id) => this.getShape(id)))
 	}
@@ -1933,7 +1932,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getErasingShapeIds() {
+	getErasingShapeIds() {
 		return this.getCurrentPageState().erasingShapeIds
 	}
 
@@ -1942,7 +1941,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getErasingShapes() {
+	getErasingShapes() {
 		const erasingShapeIds = this.getErasingShapeIds()
 		return compact(erasingShapeIds.map((id) => this.getShape(id)))
 	}
@@ -2029,7 +2028,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	/* --------------------- Camera --------------------- */
 
 	/** @internal */
-	@computed
+
 	private getCameraId() {
 		return CameraRecordType.createId(this.getCurrentPageId())
 	}
@@ -2095,7 +2094,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getCamera() {
+	getCamera() {
 		return this.store.get(this.getCameraId())!
 	}
 
@@ -2104,7 +2103,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getZoomLevel() {
+	getZoomLevel() {
 		return this.getCamera().z
 	}
 
@@ -3054,7 +3053,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getViewportScreenBounds() {
+	getViewportScreenBounds() {
 		const { x, y, w, h } = this.getInstanceState().screenBounds
 		return new Box2d(x, y, w, h)
 	}
@@ -3064,7 +3063,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getViewportScreenCenter() {
+	getViewportScreenCenter() {
 		return this.getViewportScreenBounds().center
 	}
 	/**
@@ -3072,7 +3071,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getViewportPageBounds() {
+	getViewportPageBounds() {
 		const { w, h } = this.getViewportScreenBounds()
 		const { x: cx, y: cy, z: cz } = this.getCamera()
 		return new Box2d(-cx, -cy, w / cz, h / cz)
@@ -3083,7 +3082,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getViewportPageCenter() {
+	getViewportPageCenter() {
 		return this.getViewportPageBounds().center
 	}
 	/**
@@ -3434,7 +3433,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getRenderingShapes() {
+	getRenderingShapes() {
 		const renderingShapes = this.getUnorderedRenderingShapes(true)
 
 		// Its IMPORTANT that the result be sorted by id AND include the index
@@ -3512,7 +3511,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 
 	/* --------------------- Pages ---------------------- */
 
-	@computed private _getAllPagesQuery() {
+	private _getAllPagesQuery() {
 		return this.store.query.records('page')
 	}
 
@@ -3521,7 +3520,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getPages(): TLPage[] {
+	getPages(): TLPage[] {
 		return this._getAllPagesQuery().get().sort(sortByIndex)
 	}
 
@@ -3904,7 +3903,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	/* --------------------- Assets --------------------- */
 
 	/** @internal */
-	@computed private _getAllAssetsQuery() {
+	private _getAllAssetsQuery() {
 		return this.store.query.records('asset')
 	}
 
@@ -4059,7 +4058,6 @@ export class Editor extends EventEmitter<TLEventMap> {
 
 	/* --------------------- Shapes --------------------- */
 
-	@computed
 	private _getShapeGeometryCache(): ComputedCache<Geometry2d, TLShape> {
 		return this.store.createComputedCache(
 			'bounds',
@@ -4086,7 +4084,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	}
 
 	/** @internal */
-	@computed private _getShapeOutlineSegmentsCache(): ComputedCache<Vec2d[][], TLShape> {
+	private _getShapeOutlineSegmentsCache(): ComputedCache<Vec2d[][], TLShape> {
 		return this.store.createComputedCache('outline-segments', (shape) => {
 			return this.getShapeUtil(shape).getOutlineSegments(shape)
 		})
@@ -4113,7 +4111,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	}
 
 	/** @internal */
-	@computed private _getShapeHandlesCache(): ComputedCache<TLHandle[] | undefined, TLShape> {
+	private _getShapeHandlesCache(): ComputedCache<TLHandle[] | undefined, TLShape> {
 		return this.store.createComputedCache('handles', (shape) => {
 			return this.getShapeUtil(shape).getHandles?.(shape)
 		})
@@ -4162,7 +4160,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @internal
 	 */
-	@computed private _getShapePageTransformCache(): ComputedCache<Matrix2d, TLShape> {
+	private _getShapePageTransformCache(): ComputedCache<Matrix2d, TLShape> {
 		return this.store.createComputedCache<Matrix2d, TLShape>('pageTransformCache', (shape) => {
 			if (isPageId(shape.parentId)) {
 				return this.getShapeLocalTransform(shape)
@@ -4216,7 +4214,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	}
 
 	/** @internal */
-	@computed private _getShapePageBoundsCache(): ComputedCache<Box2d, TLShape> {
+	private _getShapePageBoundsCache(): ComputedCache<Box2d, TLShape> {
 		return this.store.createComputedCache<Box2d, TLShape>('pageBoundsCache', (shape) => {
 			const pageTransform = this._getShapePageTransformCache().get(shape.id)
 
@@ -4252,7 +4250,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @internal
 	 */
-	@computed private _getShapeClipPathCache(): ComputedCache<string, TLShape> {
+	private _getShapeClipPathCache(): ComputedCache<string, TLShape> {
 		return this.store.createComputedCache<string, TLShape>('clipPathCache', (shape) => {
 			const pageMask = this._getShapeMaskCache().get(shape.id)
 			if (!pageMask) return undefined
@@ -4289,7 +4287,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	}
 
 	/** @internal */
-	@computed private _getShapeMaskCache(): ComputedCache<Vec2d[], TLShape> {
+	private _getShapeMaskCache(): ComputedCache<Vec2d[], TLShape> {
 		return this.store.createComputedCache('pageMaskCache', (shape) => {
 			if (isPageId(shape.parentId)) return undefined
 
@@ -4512,7 +4510,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getCurrentPageBounds(): Box2d | undefined {
+	getCurrentPageBounds(): Box2d | undefined {
 		let commonBounds: Box2d | undefined
 
 		this.getCurrentPageShapeIds().forEach((shapeId) => {
@@ -4833,7 +4831,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getCurrentPageShapes(): TLShape[] {
+	getCurrentPageShapes(): TLShape[] {
 		return Array.from(this.getCurrentPageShapeIds(), (id) => this.store.get(id)! as TLShape)
 	}
 
@@ -4843,7 +4841,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getCurrentPageShapesSorted(): TLShape[] {
+	getCurrentPageShapesSorted(): TLShape[] {
 		// todo: consider making into a function call that includes options for selected-only, rendering, etc.
 		// todo: consider making a derivation or something, or merging with rendering shapes
 		const shapes = new Set(this.getCurrentPageShapes().sort(sortByIndex))
@@ -4877,7 +4875,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getCurrentPageRenderingShapesSorted(): TLShape[] {
+	getCurrentPageRenderingShapesSorted(): TLShape[] {
 		return this.getRenderingShapes()
 			.filter(({ isCulled }) => !isCulled)
 			.sort((a, b) => a.index - b.index)
@@ -7551,7 +7549,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed<ReadonlySharedStyleMap>({ isEqual: (a, b) => a.equals(b) })
+	// @computed<ReadonlySharedStyleMap>({ isEqual: (a, b) => a.equals(b) })
 	getSharedStyles(): ReadonlySharedStyleMap {
 		// If we're in selecting and if we have a selection, return the shared styles from the
 		// current selection
@@ -7582,7 +7580,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	@computed getSharedOpacity(): SharedStyle<number> {
+	getSharedOpacity(): SharedStyle<number> {
 		if (this.isIn('select') && this.getSelectedShapeIds().length > 0) {
 			const shapesToCheck: TLShape[] = []
 			const addShape = (shapeId: TLShapeId) => {

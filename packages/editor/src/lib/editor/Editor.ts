@@ -2325,6 +2325,9 @@ export class Editor extends EventEmitter<TLEventMap> {
 		}
 
 		this.batch(() => {
+			const camera = { ...currentCamera, x, y, z }
+			this.store.put([camera]) // include id and meta here
+
 			// Dispatch a new pointer move because the pointer's page will have changed
 			// (its screen position will compute to a new page position given the new camera position)
 			const { currentScreenPoint, currentPagePoint } = this.inputs

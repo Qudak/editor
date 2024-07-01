@@ -39,4 +39,8 @@ export class FileHelpers {
 			}
 		})
 	}
+
+	static blobToDataUrl(blob: Blob) {
+		return URL.createObjectURL(blob)
+	}
 }

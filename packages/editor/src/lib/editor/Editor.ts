@@ -45,8 +45,10 @@ import {
 	compact,
 	dedupe,
 	deepCopy,
+	exhaustiveSwitchError,
 	getOwnProperty,
 	hasOwnProperty,
+	last,
 	sortById,
 	structuredClone,
 } from '@tldraw/utils'
@@ -61,6 +63,7 @@ import {
 	COARSE_DRAG_DISTANCE,
 	COLLABORATOR_IDLE_TIMEOUT,
 	DEFAULT_ANIMATION_OPTIONS,
+	DEFAULT_CAMERA_OPTIONS,
 	DRAG_DISTANCE,
 	FOLLOW_CHASE_PAN_SNAP,
 	FOLLOW_CHASE_PAN_UNSNAP,
@@ -129,7 +132,13 @@ import {
 } from './types/event-types'
 import { TLExternalAssetContent, TLExternalContent } from './types/external-content'
 import { TLCommandHistoryOptions } from './types/history-types'
-import { OptionalKeys, RequiredKeys, TLSvgOptions } from './types/misc-types'
+import {
+	OptionalKeys,
+	RequiredKeys,
+	TLCameraMoveOptions,
+	TLCameraOptions,
+	TLSvgOptions,
+} from './types/misc-types'
 import { TLResizeHandle } from './types/selection-types'
 
 /** @public */
@@ -2025,6 +2034,62 @@ export class Editor extends EventEmitter<TLEventMap> {
 		return CameraRecordType.createId(this.getCurrentPageId())
 	}
 
+	getBaseZoom() {
+		const cameraOptions = this.getCameraOptions()
+		// If no camera constraints are provided, the default zoom is 100%
+		if (!cameraOptions.constraints) return 1
+
+		// When defaultZoom is default, the default zoom is 100%
+		if (cameraOptions.constraints.baseZoom === 'default') return 1
+
+		const { zx, zy } = getCameraFitXFitY(this, cameraOptions)
+
+		switch (cameraOptions.constraints.baseZoom) {
+			case 'fit-min': {
+				return Math.max(zx, zy)
+			}
+			case 'fit-max': {
+				return Math.min(zx, zy)
+			}
+			case 'fit-x': {
+				return zx
+			}
+			case 'fit-y': {
+				return zy
+			}
+			case 'fit-min-100': {
+				return Math.min(1, Math.max(zx, zy))
+			}
+			case 'fit-max-100': {
+				return Math.min(1, Math.min(zx, zy))
+			}
+			case 'fit-x-100': {
+				return Math.min(1, zx)
+			}
+			case 'fit-y-100': {
+				return Math.min(1, zy)
+			}
+			default: {
+				throw exhaustiveSwitchError(cameraOptions.constraints.baseZoom)
+			}
+		}
+	}
+
+	private _cameraOptions = atom('camera options', DEFAULT_CAMERA_OPTIONS)
+
+	/**
+	 * Get the current camera options.
+	 *
+	 * @example
+	 * ```ts
+	 * editor.getCameraOptions()
+	 * ```
+	 *
+	 *  @public */
+	getCameraOptions() {
+		return this._cameraOptions.get()
+	}
+
 	/**
 	 * The current camera.
 	 *
@@ -2043,33 +2108,251 @@ export class Editor extends EventEmitter<TLEventMap> {
 		return this.getCamera().z
 	}
 
-	/** @internal */
-	private _setCamera(point: VecLike): this {
+	getInitialZoom() {
+		const cameraOptions = this.getCameraOptions()
+		// If no camera constraints are provided, the default zoom is 100%
+		if (!cameraOptions.constraints) return 1
+
+		// When defaultZoom is default, the default zoom is 100%
+		if (cameraOptions.constraints.initialZoom === 'default') return 1
+
+		const { zx, zy } = getCameraFitXFitY(this, cameraOptions)
+
+		switch (cameraOptions.constraints.initialZoom) {
+			case 'fit-min': {
+				return Math.max(zx, zy)
+			}
+			case 'fit-max': {
+				return Math.min(zx, zy)
+			}
+			case 'fit-x': {
+				return zx
+			}
+			case 'fit-y': {
+				return zy
+			}
+			case 'fit-min-100': {
+				return Math.min(1, Math.max(zx, zy))
+			}
+			case 'fit-max-100': {
+				return Math.min(1, Math.min(zx, zy))
+			}
+			case 'fit-x-100': {
+				return Math.min(1, zx)
+			}
+			case 'fit-y-100': {
+				return Math.min(1, zy)
+			}
+			default: {
+				throw exhaustiveSwitchError(cameraOptions.constraints.initialZoom)
+			}
+		}
+	}
+
+	private getConstrainedCamera(
+		point: VecLike,
+		opts?: TLCameraMoveOptions
+	): {
+		x: number
+		y: number
+		z: number
+	} {
 		const currentCamera = this.getCamera()
+
+		let { x, y, z = currentCamera.z } = point
+
+		// If force is true, then we'll set the camera to the point regardless of
+		// the camera options, so that we can handle gestures that permit elasticity
+		// or decay, or animations that occur while the camera is locked.
+		if (!opts?.force) {
+			// Apply any adjustments based on the camera options
+
+			const cameraOptions = this.getCameraOptions()
+
+			const zoomMin = cameraOptions.zoomSteps[0]
+			const zoomMax = last(cameraOptions.zoomSteps)!
+
+			const vsb = this.getViewportScreenBounds()
+
+			// If bounds are provided, then we'll keep those bounds on screen
+			if (cameraOptions.constraints) {
+				const { constraints } = cameraOptions
+
+				// Clamp padding to half the viewport size on either dimension
+				const py = Math.min(constraints.padding.y, vsb.w / 2)
+				const px = Math.min(constraints.padding.x, vsb.h / 2)
+
+				// Expand the bounds by the padding
+				const bounds = Box2d.From(cameraOptions.constraints.bounds)
+
+				// For each axis, the "natural zoom" is the zoom at
+				// which the expanded bounds (with padding) would fit
+				// the current viewport screen bounds. Paddings are
+				// equal to screen pixels at 100%
+				// The min and max zooms are factors of the smaller natural zoom axis
+
+				const zx = (vsb.w - px * 2) / bounds.w
+				const zy = (vsb.h - py * 2) / bounds.h
+
+				const baseZoom = this.getBaseZoom()
+				const maxZ = zoomMax * baseZoom
+				const minZ = zoomMin * baseZoom
+
+				if (opts?.reset) {
+					z = this.getInitialZoom()
+				}
+
+				if (z < minZ || z > maxZ) {
+					// We're trying to zoom out past the minimum zoom level,
+					// or in past the maximum zoom level, so stop the camera
+					// but keep the current center
+					const { x: cx, y: cy, z: cz } = currentCamera
+					const cxA = -cx + vsb.w / cz / 2
+					const cyA = -cy + vsb.h / cz / 2
+					z = clamp(z, minZ, maxZ)
+					const cxB = -cx + vsb.w / z / 2
+					const cyB = -cy + vsb.h / z / 2
+					x = cx + cxB - cxA
+					y = cy + cyB - cyA
+				}
+
+				// Calculate available space
+				const minX = px / z - bounds.x
+				const minY = py / z - bounds.y
+				const freeW = (vsb.w - px * 2) / z - bounds.w
+				const freeH = (vsb.h - py * 2) / z - bounds.h
+				const originX = minX + freeW * constraints.origin.x
+				const originY = minY + freeH * constraints.origin.y
+
+				const behaviorX =
+					typeof constraints.behavior === 'string' ? constraints.behavior : constraints.behavior.x
+				const behaviorY =
+					typeof constraints.behavior === 'string' ? constraints.behavior : constraints.behavior.y
+
+				// x axis
+
+				if (opts?.reset) {
+					// Reset the camera according to the origin
+					x = originX
+					y = originY
+				} else {
+					// Apply constraints to the camera
+					switch (behaviorX) {
+						case 'fixed': {
+							// Center according to the origin
+							x = originX
+							break
+						}
+						case 'contain': {
+							// When below fit zoom, center the camera
+							if (z < zx) x = originX
+							// When above fit zoom, keep the bounds within padding distance of the viewport edge
+							else x = clamp(x, minX + freeW, minX)
+							break
+						}
+						case 'inside': {
+							// When below fit zoom, constrain the camera so that the bounds stay completely within the viewport
+							if (z < zx) x = clamp(x, minX, (vsb.w - px) / z - bounds.w)
+							// When above fit zoom, keep the bounds within padding distance of the viewport edge
+							else x = clamp(x, minX + freeW, minX)
+							break
+						}
+						case 'outside': {
+							// Constrain the camera so that the bounds never leaves the viewport
+							x = clamp(x, px / z - bounds.w, (vsb.w - px) / z)
+							break
+						}
+						case 'free': {
+							// noop, use whatever x is provided
+							break
+						}
+						default: {
+							throw 'Exhaustive switch error'
+						}
+					}
+
+					// y axis
+
+					switch (behaviorY) {
+						case 'fixed': {
+							y = originY
+							break
+						}
+						case 'contain': {
+							if (z < zy) y = originY
+							else y = clamp(y, minY + freeH, minY)
+							break
+						}
+						case 'inside': {
+							if (z < zy) y = clamp(y, minY, (vsb.h - py) / z - bounds.h)
+							else y = clamp(y, minY + freeH, minY)
+							break
+						}
+						case 'outside': {
+							y = clamp(y, py / z - bounds.h, (vsb.h - py) / z)
+							break
+						}
+						case 'free': {
+							// noop, use whatever x is provided
+							break
+						}
+						default: {
+							throw 'Exhaustive switch error'
+						}
+					}
+				}
+			} else {
+				// constrain the zoom, preserving the center
+				if (z > zoomMax || z < zoomMin) {
+					const { x: cx, y: cy, z: cz } = currentCamera
+					z = clamp(z, zoomMin, zoomMax)
+					x = cx + (-cx + vsb.w / z / 2) - (-cx + vsb.w / cz / 2)
+					y = cy + (-cy + vsb.h / z / 2) - (-cy + vsb.h / cz / 2)
+				}
+			}
+		}
+
+		return { x, y, z }
+	}
+
+	/** @internal */
+	private _setCamera(point: VecLike, opts?: TLCameraMoveOptions): this {
+		const currentCamera = this.getCamera()
+
+		const { x, y, z } = this.getConstrainedCamera(point, opts)
 
 		if (currentCamera.x === point.x && currentCamera.y === point.y && currentCamera.z === point.z) {
 			return this
 		}
 
 		this.batch(() => {
-			this.store.put([{ ...currentCamera, ...point }]) // include id and meta here
-
 			// Dispatch a new pointer move because the pointer's page will have changed
 			// (its screen position will compute to a new page position given the new camera position)
-			const { currentScreenPoint } = this.inputs
+			const { currentScreenPoint, currentPagePoint } = this.inputs
+			const { screenBounds } = this.store.unsafeGetWithoutCapture(TLINSTANCE_ID)!
 
-			this.dispatch({
-				type: 'pointer',
-				target: 'canvas',
-				name: 'pointer_move',
-				point: currentScreenPoint,
-				pointerId: INTERNAL_POINTER_IDS.CAMERA_MOVE,
-				ctrlKey: this.inputs.ctrlKey,
-				altKey: this.inputs.altKey,
-				shiftKey: this.inputs.shiftKey,
-				button: 0,
-				isPen: this.getInstanceState().isPenMode ?? false,
-			})
+			// compare the next page point (derived from the current camera) to the current page point
+			if (
+				currentScreenPoint.x / z - x !== currentPagePoint.x ||
+				currentScreenPoint.y / z - y !== currentPagePoint.y
+			) {
+				// If it's changed, dispatch a pointer event
+				const event: TLPointerEventInfo = {
+					type: 'pointer',
+					target: 'canvas',
+					name: 'pointer_move',
+					// weird but true: we need to put the screen point back into client space
+					point: Vec2d.AddXY(currentScreenPoint, screenBounds.x, screenBounds.y),
+					pointerId: INTERNAL_POINTER_IDS.CAMERA_MOVE,
+					ctrlKey: this.inputs.ctrlKey,
+					altKey: this.inputs.altKey,
+					shiftKey: this.inputs.shiftKey,
+					button: 0,
+					isPen: this.getInstanceState().isPenMode ?? false,
+				}
+
+				this.dispatch(event)
+			}
 
 			this._tickCameraState()
 		})
@@ -2092,10 +2375,9 @@ export class Editor extends EventEmitter<TLEventMap> {
 	 *
 	 * @public
 	 */
-	setCamera(point: VecLike, animation?: TLAnimationOptions): this {
-		const x = Number.isFinite(point.x) ? point.x : 0
-		const y = Number.isFinite(point.y) ? point.y : 0
-		const z = Number.isFinite(point.z) ? point.z! : this.getZoomLevel()
+	setCamera(point: VecLike, opts?: TLCameraMoveOptions): this {
+		const { isLocked } = this._cameraOptions.__unsafe__getWithoutCapture()
+		if (isLocked && !opts?.force) return this
 
 		// Stop any camera animations
 		this.stopCameraAnimation()
@@ -2105,13 +2387,38 @@ export class Editor extends EventEmitter<TLEventMap> {
 			this.stopFollowingUser()
 		}
 
-		if (animation) {
+		const _point = Vec2d.Cast(point)
+
+		if (!Number.isFinite(_point.x)) _point.x = 0
+		if (!Number.isFinite(_point.y)) _point.y = 0
+		if (_point.z === undefined || !Number.isFinite(_point.z)) point.z = this.getZoomLevel()
+
+		const camera = this.getConstrainedCamera(_point, opts)
+
+		if (opts?.animation) {
 			const { width, height } = this.getViewportScreenBounds()
-			return this._animateToViewport(new Box2d(-x, -y, width / z, height / z), animation)
+			this._animateToViewport(
+				new Box2d(-camera.x, -camera.y, width / camera.z, height / camera.z),
+				opts.animation
+			)
 		} else {
-			this._setCamera({ x, y, z })
+			this._setCamera(camera, {
+				...opts,
+				// we already did the constraining, so we don't need to do it again
+				force: true,
+			})
 		}
 
+		return this
+	}
+
+	setCameraOptions(options: Partial<TLCameraOptions>) {
+		const next = structuredClone({
+			...this._cameraOptions.__unsafe__getWithoutCapture(),
+			...options,
+		})
+		if (next.zoomSteps?.length < 1) next.zoomSteps = [1]
+		this._cameraOptions.set(next)
 		return this
 	}
 
@@ -2136,7 +2443,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 
 		this.setCamera(
 			{ x: -(point.x - pw / 2), y: -(point.y - ph / 2), z: this.getCamera().z },
-			animation
+			{ animation }
 		)
 		return this
 	}
@@ -2210,7 +2517,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 		const { x, y } = point
 		this.setCamera(
 			{ x: cx + (x / 1 - x) - (x / cz - x), y: cy + (y / 1 - y) - (y / cz - y), z: 1 },
-			animation
+			{ animation }
 		)
 
 		return this
@@ -2248,7 +2555,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 		const { x, y } = point
 		this.setCamera(
 			{ x: cx + (x / zoom - x) - (x / cz - x), y: cy + (y / zoom - y) - (y / cz - y), z: zoom },
-			animation
+			{ animation }
 		)
 
 		return this
@@ -2291,7 +2598,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 				y: cy + (y / zoom - y) - (y / cz - y),
 				z: zoom,
 			},
-			animation
+			{ animation }
 		)
 
 		return this
@@ -2368,7 +2675,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 			}
 
 			const camera = this.getCamera()
-			this.setCamera({ x: camera.x + offsetX, y: camera.y + offsetY, z: camera.z }, animation)
+			this.setCamera({ x: camera.x + offsetX, y: camera.y + offsetY, z: camera.z }, { animation })
 		}
 
 		return this
@@ -2416,7 +2723,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 				y: -bounds.minY + (viewportScreenBounds.height - bounds.height * zoom) / 2 / zoom,
 				z: zoom,
 			},
-			animation
+			{ animation }
 		)
 
 		return this
@@ -2437,8 +2744,13 @@ export class Editor extends EventEmitter<TLEventMap> {
 	pan(offset: VecLike, animation?: TLAnimationOptions): this {
 		if (!this.getInstanceState().canMoveCamera) return this
 		const { x: cx, y: cy, z: cz } = this.getCamera()
-		this.setCamera({ x: cx + offset.x / cz, y: cy + offset.y / cz, z: cz }, animation)
+		this.setCamera({ x: cx + offset.x / cz, y: cy + offset.y / cz, z: cz }, { animation })
 		return this
+	}
+
+	pageToViewport(point: VecLike) {
+		const { x: cx, y: cy, z: cz = 1 } = this.getCamera()
+		return new Vec2d((point.x + cx) * cz, (point.y + cy) * cz, point.z ?? 0.5)
 	}
 
 	/**
@@ -8953,4 +9265,16 @@ export class Editor extends EventEmitter<TLEventMap> {
 function alertMaxShapes(editor: Editor, pageId = editor.getCurrentPageId()) {
 	const name = editor.getPage(pageId)!.name
 	editor.emit('max-shapes', { name, pageId, count: MAX_SHAPES_PER_PAGE })
+}
+
+function getCameraFitXFitY(editor: Editor, cameraOptions: TLCameraOptions) {
+	if (!cameraOptions.constraints) throw Error('Should have constraints here')
+	const {
+		padding: { x: px, y: py },
+	} = cameraOptions.constraints
+	const vsb = editor.getViewportScreenBounds()
+	const bounds = Box2d.From(cameraOptions.constraints.bounds)
+	const zx = (vsb.w - px * 2) / bounds.w
+	const zy = (vsb.h - py * 2) / bounds.h
+	return { zx, zy }
 }

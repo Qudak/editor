@@ -1,3 +1,4 @@
+import { TLCameraOptions } from './editor/types/misc-types'
 import { EASINGS } from './primitives/easings'
 
 /** @internal */
@@ -16,6 +17,15 @@ export const ZOOMS = [0.1, 0.25, 0.5, 1, 2, 4, 8]
 export const MIN_ZOOM = 0.1
 /** @internal */
 export const MAX_ZOOM = 8
+
+/** @internal */
+export const DEFAULT_CAMERA_OPTIONS: TLCameraOptions = {
+	isLocked: false,
+	wheelBehavior: 'pan',
+	panSpeed: 1,
+	zoomSpeed: 1,
+	zoomSteps: [0.1, 0.25, 0.5, 1, 2, 4, 8],
+}
 
 /** @internal */
 export const FOLLOW_CHASE_PROPORTION = 0.5

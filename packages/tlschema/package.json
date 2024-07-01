@@ -56,10 +56,10 @@
 		]
 	},
 	"dependencies": {
-		"@tldraw/state": "workspace:*",
-		"@tldraw/store": "workspace:*",
-		"@tldraw/utils": "workspace:*",
-		"@tldraw/validate": "workspace:*",
+		"@tldraw/state": "file:../state/",
+		"@tldraw/store": "file:../store/",
+		"@tldraw/utils": "file:../utils/",
+		"@tldraw/validate": "file:../validate/",
 		"nanoid": "4.0.2"
 	}
 }

@@ -65,4 +65,9 @@ export class MediaHelpers {
 			img.src = dataURL
 		})
 	}
+
+	static getImageSize(file: File): Promise<{ w: number; h: number }> {
+		const dataURL = URL.createObjectURL(file)
+		return MediaHelpers.getImageSizeFromSrc(dataURL)
+	}
 }

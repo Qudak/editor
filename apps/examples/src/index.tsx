@@ -43,6 +43,7 @@ import EndToEnd from './examples/end-to-end/end-to-end'
 import OnlyEditorExample from './examples/only-editor/OnlyEditor'
 import YjsExample from './examples/yjs/YjsExample'
 
+import ImageAnnotatorWrapper from './examples/image-editor/image-editor'
 // This example is only used for end to end tests
 
 // we use secret internal `setDefaultAssetUrls` functions to set these at the
@@ -202,6 +203,11 @@ export const allExamples: Example[] = [
 		title: 'External content sources',
 		path: 'external-content-sources',
 		element: <ExternalContentSourcesExample />,
+	},
+	{
+		title: 'Image editor',
+		path: 'image-editor',
+		element: <ImageAnnotatorWrapper />,
 	},
 	// not listed
 	{

@@ -4739,9 +4739,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tldraw/editor@file:../editor/::locator=%40tldraw%2Ftldraw%40file%3A..%2F..%2Fpackages%2Ftldraw%2F%23..%2F..%2Fpackages%2Ftldraw%2F%3A%3Ahash%3Ddc6c31%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples":
+"@tldraw/editor@file:../../packages/editor/::locator=examples.tldraw.com%40workspace%3Aapps%2Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/editor@file:../editor/#../editor/::hash=a85cb9&locator=%40tldraw%2Ftldraw%40file%3A..%2F..%2Fpackages%2Ftldraw%2F%23..%2F..%2Fpackages%2Ftldraw%2F%3A%3Ahash%3Ddc6c31%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples"
+  resolution: "@tldraw/editor@file:../../packages/editor/#../../packages/editor/::hash=ce13ec&locator=examples.tldraw.com%40workspace%3Aapps%2Fexamples"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/store": "file:../store/"
@@ -4761,13 +4761,39 @@ __metadata:
   peerDependencies:
     react: ^18
     react-dom: ^18
-  checksum: f5108f1c271ac1fc2a6fd78babf9b61cd2f96738e0bb46f8c906113638bfef058ba9993fb0709773d7bb2cc25e3accff8f41ab77f60eaeb2ec72860e3d428d8f
+  checksum: 8120fe8133a180abad207d53cf9bb2e140a5cf0c00d1c6524ac16a7c06113790eeb91b881d1d69c98c9d67285dbb6e7a6aa3648fd0abe58e6c1c030074917b84
+  languageName: node
+  linkType: hard
+
+"@tldraw/editor@file:../editor/::locator=%40tldraw%2Ftldraw%40file%3A..%2F..%2Fpackages%2Ftldraw%2F%23..%2F..%2Fpackages%2Ftldraw%2F%3A%3Ahash%3Ddc6c31%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/editor@file:../editor/#../editor/::hash=ce13ec&locator=%40tldraw%2Ftldraw%40file%3A..%2F..%2Fpackages%2Ftldraw%2F%23..%2F..%2Fpackages%2Ftldraw%2F%3A%3Ahash%3Ddc6c31%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples"
+  dependencies:
+    "@tldraw/state": "file:../state/"
+    "@tldraw/store": "file:../store/"
+    "@tldraw/tlschema": "file:../tlschema/"
+    "@tldraw/utils": "file:../utils/"
+    "@tldraw/validate": "file:../validate/"
+    "@types/core-js": ^2.5.5
+    "@use-gesture/react": ^10.2.27
+    classnames: ^2.3.2
+    core-js: ^3.31.1
+    eventemitter3: ^4.0.7
+    idb: ^7.1.1
+    is-plain-object: ^5.0.0
+    lodash.throttle: ^4.1.1
+    lodash.uniq: ^4.5.0
+    nanoid: 4.0.2
+  peerDependencies:
+    react: ^18
+    react-dom: ^18
+  checksum: 8120fe8133a180abad207d53cf9bb2e140a5cf0c00d1c6524ac16a7c06113790eeb91b881d1d69c98c9d67285dbb6e7a6aa3648fd0abe58e6c1c030074917b84
   languageName: node
   linkType: hard
 
 "@tldraw/editor@file:../editor/::locator=%40tldraw%2Ftldraw%40workspace%3Apackages%2Ftldraw":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/editor@file:../editor/#../editor/::hash=a85cb9&locator=%40tldraw%2Ftldraw%40workspace%3Apackages%2Ftldraw"
+  resolution: "@tldraw/editor@file:../editor/#../editor/::hash=ce13ec&locator=%40tldraw%2Ftldraw%40workspace%3Apackages%2Ftldraw"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/store": "file:../store/"
@@ -4787,7 +4813,7 @@ __metadata:
   peerDependencies:
     react: ^18
     react-dom: ^18
-  checksum: f5108f1c271ac1fc2a6fd78babf9b61cd2f96738e0bb46f8c906113638bfef058ba9993fb0709773d7bb2cc25e3accff8f41ab77f60eaeb2ec72860e3d428d8f
+  checksum: 8120fe8133a180abad207d53cf9bb2e140a5cf0c00d1c6524ac16a7c06113790eeb91b881d1d69c98c9d67285dbb6e7a6aa3648fd0abe58e6c1c030074917b84
   languageName: node
   linkType: hard
 
@@ -4897,18 +4923,27 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Feditor%40file%3A..%2F..%2Fpackages%2Feditor%2F%23..%2F..%2Fpackages%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Feditor%40file%3A..%2F..%2Fpackages%2Feditor%2F%23..%2F..%2Fpackages%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
   languageName: node
   linkType: hard
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
+  peerDependencies:
+    react: ^18
+  checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
+  languageName: node
+  linkType: hard
+
+"@tldraw/state@file:../state/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
@@ -4924,63 +4959,81 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
   languageName: node
   linkType: hard
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
   languageName: node
   linkType: hard
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
   languageName: node
   linkType: hard
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
   languageName: node
   linkType: hard
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252F..%25252Fpackages%25252Feditor%25252F%252523..%25252F..%25252Fpackages%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252F..%25252Fpackages%25252Feditor%25252F%252523..%25252F..%25252Fpackages%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
   languageName: node
   linkType: hard
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
   languageName: node
   linkType: hard
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw"
+  peerDependencies:
+    react: ^18
+  checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
+  languageName: node
+  linkType: hard
+
+"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor"
+  peerDependencies:
+    react: ^18
+  checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
+  languageName: node
+  linkType: hard
+
+"@tldraw/state@file:../state/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
@@ -4996,27 +5049,36 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
   languageName: node
   linkType: hard
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
   languageName: node
   linkType: hard
 
-"@tldraw/state@file:../state/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
+"@tldraw/state@file:../state/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
+  peerDependencies:
+    react: ^18
+  checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
+  languageName: node
+  linkType: hard
+
+"@tldraw/state@file:../state/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/state@file:../state/#../state/::hash=941811&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
   peerDependencies:
     react: ^18
   checksum: 9f216d81d5dc9a55a871898d79811405369e8546487106755579c880f9b53856fd915fbcd239579e884d04c4460b1b53a86c6689736be744e7127c31a4b67baf
@@ -5046,87 +5108,111 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tldraw/store@file:../store/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
+"@tldraw/store@file:../store/::locator=%40tldraw%2Feditor%40file%3A..%2F..%2Fpackages%2Feditor%2F%23..%2F..%2Fpackages%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/store@file:../store/#../store/::hash=cbbf02&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
+  resolution: "@tldraw/store@file:../store/#../store/::hash=934d7f&locator=%40tldraw%2Feditor%40file%3A..%2F..%2Fpackages%2Feditor%2F%23..%2F..%2Fpackages%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/utils": "file:../utils/"
     lodash.isequal: ^4.5.0
     nanoid: 4.0.2
-  checksum: 121a4d9052ff1efe2a6d72d451905e4e903a3eabd480094101c453b83b09b02cf8d9bd8284c61179cd5f6d55aeaf9e583db629c485912b681eb72919211361ba
+  checksum: 9372c565115cec4365dd96b0e4f343aa9ac352f9e3f122eaa930648725290de182a50301e28249f9532b34efffddb850ac1072599a66bd1ad7a5d82e97e572a8
   languageName: node
   linkType: hard
 
-"@tldraw/store@file:../store/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw":
+"@tldraw/store@file:../store/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/store@file:../store/#../store/::hash=cbbf02&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw"
+  resolution: "@tldraw/store@file:../store/#../store/::hash=934d7f&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/utils": "file:../utils/"
     lodash.isequal: ^4.5.0
     nanoid: 4.0.2
-  checksum: 121a4d9052ff1efe2a6d72d451905e4e903a3eabd480094101c453b83b09b02cf8d9bd8284c61179cd5f6d55aeaf9e583db629c485912b681eb72919211361ba
+  checksum: 9372c565115cec4365dd96b0e4f343aa9ac352f9e3f122eaa930648725290de182a50301e28249f9532b34efffddb850ac1072599a66bd1ad7a5d82e97e572a8
+  languageName: node
+  linkType: hard
+
+"@tldraw/store@file:../store/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/store@file:../store/#../store/::hash=934d7f&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw"
+  dependencies:
+    "@tldraw/state": "file:../state/"
+    "@tldraw/utils": "file:../utils/"
+    lodash.isequal: ^4.5.0
+    nanoid: 4.0.2
+  checksum: 9372c565115cec4365dd96b0e4f343aa9ac352f9e3f122eaa930648725290de182a50301e28249f9532b34efffddb850ac1072599a66bd1ad7a5d82e97e572a8
   languageName: node
   linkType: hard
 
 "@tldraw/store@file:../store/::locator=%40tldraw%2Feditor%40workspace%3Apackages%2Feditor":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/store@file:../store/#../store/::hash=cbbf02&locator=%40tldraw%2Feditor%40workspace%3Apackages%2Feditor"
+  resolution: "@tldraw/store@file:../store/#../store/::hash=934d7f&locator=%40tldraw%2Feditor%40workspace%3Apackages%2Feditor"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/utils": "file:../utils/"
     lodash.isequal: ^4.5.0
     nanoid: 4.0.2
-  checksum: 121a4d9052ff1efe2a6d72d451905e4e903a3eabd480094101c453b83b09b02cf8d9bd8284c61179cd5f6d55aeaf9e583db629c485912b681eb72919211361ba
+  checksum: 9372c565115cec4365dd96b0e4f343aa9ac352f9e3f122eaa930648725290de182a50301e28249f9532b34efffddb850ac1072599a66bd1ad7a5d82e97e572a8
   languageName: node
   linkType: hard
 
-"@tldraw/store@file:../store/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
+"@tldraw/store@file:../store/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/store@file:../store/#../store/::hash=cbbf02&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
+  resolution: "@tldraw/store@file:../store/#../store/::hash=934d7f&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/utils": "file:../utils/"
     lodash.isequal: ^4.5.0
     nanoid: 4.0.2
-  checksum: 121a4d9052ff1efe2a6d72d451905e4e903a3eabd480094101c453b83b09b02cf8d9bd8284c61179cd5f6d55aeaf9e583db629c485912b681eb72919211361ba
+  checksum: 9372c565115cec4365dd96b0e4f343aa9ac352f9e3f122eaa930648725290de182a50301e28249f9532b34efffddb850ac1072599a66bd1ad7a5d82e97e572a8
   languageName: node
   linkType: hard
 
-"@tldraw/store@file:../store/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
+"@tldraw/store@file:../store/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/store@file:../store/#../store/::hash=cbbf02&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
+  resolution: "@tldraw/store@file:../store/#../store/::hash=934d7f&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/utils": "file:../utils/"
     lodash.isequal: ^4.5.0
     nanoid: 4.0.2
-  checksum: 121a4d9052ff1efe2a6d72d451905e4e903a3eabd480094101c453b83b09b02cf8d9bd8284c61179cd5f6d55aeaf9e583db629c485912b681eb72919211361ba
+  checksum: 9372c565115cec4365dd96b0e4f343aa9ac352f9e3f122eaa930648725290de182a50301e28249f9532b34efffddb850ac1072599a66bd1ad7a5d82e97e572a8
   languageName: node
   linkType: hard
 
-"@tldraw/store@file:../store/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
+"@tldraw/store@file:../store/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/store@file:../store/#../store/::hash=cbbf02&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
+  resolution: "@tldraw/store@file:../store/#../store/::hash=934d7f&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/utils": "file:../utils/"
     lodash.isequal: ^4.5.0
     nanoid: 4.0.2
-  checksum: 121a4d9052ff1efe2a6d72d451905e4e903a3eabd480094101c453b83b09b02cf8d9bd8284c61179cd5f6d55aeaf9e583db629c485912b681eb72919211361ba
+  checksum: 9372c565115cec4365dd96b0e4f343aa9ac352f9e3f122eaa930648725290de182a50301e28249f9532b34efffddb850ac1072599a66bd1ad7a5d82e97e572a8
+  languageName: node
+  linkType: hard
+
+"@tldraw/store@file:../store/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/store@file:../store/#../store/::hash=934d7f&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
+  dependencies:
+    "@tldraw/state": "file:../state/"
+    "@tldraw/utils": "file:../utils/"
+    lodash.isequal: ^4.5.0
+    nanoid: 4.0.2
+  checksum: 9372c565115cec4365dd96b0e4f343aa9ac352f9e3f122eaa930648725290de182a50301e28249f9532b34efffddb850ac1072599a66bd1ad7a5d82e97e572a8
   languageName: node
   linkType: hard
 
 "@tldraw/store@file:../store/::locator=%40tldraw%2Ftlschema%40workspace%3Apackages%2Ftlschema":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/store@file:../store/#../store/::hash=cbbf02&locator=%40tldraw%2Ftlschema%40workspace%3Apackages%2Ftlschema"
+  resolution: "@tldraw/store@file:../store/#../store/::hash=934d7f&locator=%40tldraw%2Ftlschema%40workspace%3Apackages%2Ftlschema"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/utils": "file:../utils/"
     lodash.isequal: ^4.5.0
     nanoid: 4.0.2
-  checksum: 121a4d9052ff1efe2a6d72d451905e4e903a3eabd480094101c453b83b09b02cf8d9bd8284c61179cd5f6d55aeaf9e583db629c485912b681eb72919211361ba
+  checksum: 9372c565115cec4365dd96b0e4f343aa9ac352f9e3f122eaa930648725290de182a50301e28249f9532b34efffddb850ac1072599a66bd1ad7a5d82e97e572a8
   languageName: node
   linkType: hard
 
@@ -5206,42 +5292,55 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tldraw/tlschema@file:../tlschema/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
+"@tldraw/tlschema@file:../tlschema/::locator=%40tldraw%2Feditor%40file%3A..%2F..%2Fpackages%2Feditor%2F%23..%2F..%2Fpackages%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/tlschema@file:../tlschema/#../tlschema/::hash=4f2333&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
+  resolution: "@tldraw/tlschema@file:../tlschema/#../tlschema/::hash=07a4bb&locator=%40tldraw%2Feditor%40file%3A..%2F..%2Fpackages%2Feditor%2F%23..%2F..%2Fpackages%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/store": "file:../store/"
     "@tldraw/utils": "file:../utils/"
     "@tldraw/validate": "file:../validate/"
     nanoid: 4.0.2
-  checksum: 970498bc4d8bdda6e88a0b6d51bf56a87e57a7900c4c7703a32bfeae8a4dc39387951f17a19530ccfde93cdc5151c5a60bb113589d69b066d243aaac6682d43a
+  checksum: 2de39f6e8d6348680efc6e2aa66e9530592551b845e4397766e020b93cc2324d505064fd7cd1a37fe4d97da47d2bcdfd5c9cb68e348e24636f3acf2ea9a49dcf
   languageName: node
   linkType: hard
 
-"@tldraw/tlschema@file:../tlschema/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw":
+"@tldraw/tlschema@file:../tlschema/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/tlschema@file:../tlschema/#../tlschema/::hash=4f2333&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw"
+  resolution: "@tldraw/tlschema@file:../tlschema/#../tlschema/::hash=07a4bb&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/store": "file:../store/"
     "@tldraw/utils": "file:../utils/"
     "@tldraw/validate": "file:../validate/"
     nanoid: 4.0.2
-  checksum: 970498bc4d8bdda6e88a0b6d51bf56a87e57a7900c4c7703a32bfeae8a4dc39387951f17a19530ccfde93cdc5151c5a60bb113589d69b066d243aaac6682d43a
+  checksum: 2de39f6e8d6348680efc6e2aa66e9530592551b845e4397766e020b93cc2324d505064fd7cd1a37fe4d97da47d2bcdfd5c9cb68e348e24636f3acf2ea9a49dcf
+  languageName: node
+  linkType: hard
+
+"@tldraw/tlschema@file:../tlschema/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/tlschema@file:../tlschema/#../tlschema/::hash=07a4bb&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw"
+  dependencies:
+    "@tldraw/state": "file:../state/"
+    "@tldraw/store": "file:../store/"
+    "@tldraw/utils": "file:../utils/"
+    "@tldraw/validate": "file:../validate/"
+    nanoid: 4.0.2
+  checksum: 2de39f6e8d6348680efc6e2aa66e9530592551b845e4397766e020b93cc2324d505064fd7cd1a37fe4d97da47d2bcdfd5c9cb68e348e24636f3acf2ea9a49dcf
   languageName: node
   linkType: hard
 
 "@tldraw/tlschema@file:../tlschema/::locator=%40tldraw%2Feditor%40workspace%3Apackages%2Feditor":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/tlschema@file:../tlschema/#../tlschema/::hash=4f2333&locator=%40tldraw%2Feditor%40workspace%3Apackages%2Feditor"
+  resolution: "@tldraw/tlschema@file:../tlschema/#../tlschema/::hash=07a4bb&locator=%40tldraw%2Feditor%40workspace%3Apackages%2Feditor"
   dependencies:
     "@tldraw/state": "file:../state/"
     "@tldraw/store": "file:../store/"
     "@tldraw/utils": "file:../utils/"
     "@tldraw/validate": "file:../validate/"
     nanoid: 4.0.2
-  checksum: 970498bc4d8bdda6e88a0b6d51bf56a87e57a7900c4c7703a32bfeae8a4dc39387951f17a19530ccfde93cdc5151c5a60bb113589d69b066d243aaac6682d43a
+  checksum: 2de39f6e8d6348680efc6e2aa66e9530592551b845e4397766e020b93cc2324d505064fd7cd1a37fe4d97da47d2bcdfd5c9cb68e348e24636f3acf2ea9a49dcf
   languageName: node
   linkType: hard
 
@@ -5259,6 +5358,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@tldraw/utils@file:../../packages/utils/::locator=examples.tldraw.com%40workspace%3Aapps%2Fexamples":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/utils@file:../../packages/utils/#../../packages/utils/::hash=96026b&locator=examples.tldraw.com%40workspace%3Aapps%2Fexamples"
+  checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
+  languageName: node
+  linkType: hard
+
 "@tldraw/utils@file:../utils/::locator=%40tldraw%2Fassets%40file%3A..%2F..%2Fpackages%2Fassets%2F%23..%2F..%2Fpackages%2Fassets%2F%3A%3Ahash%3D7ef196%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples":
   version: 2.0.0-alpha.19
   resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fassets%40file%3A..%2F..%2Fpackages%2Fassets%2F%23..%2F..%2Fpackages%2Fassets%2F%3A%3Ahash%3D7ef196%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples"
@@ -5273,16 +5379,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Feditor%40file%3A..%2F..%2Fpackages%2Feditor%2F%23..%2F..%2Fpackages%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Feditor%40file%3A..%2F..%2Fpackages%2Feditor%2F%23..%2F..%2Fpackages%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
+  checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
+  languageName: node
+  linkType: hard
+
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
@@ -5294,51 +5407,65 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252F..%25252Fpackages%25252Feditor%25252F%252523..%25252F..%25252Fpackages%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252F..%25252Fpackages%25252Feditor%25252F%252523..%25252F..%25252Fpackages%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3Dcbbf02%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw"
+  checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
+  languageName: node
+  linkType: hard
+
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor"
+  checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
+  languageName: node
+  linkType: hard
+
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fstore%40file%3A..%2Fstore%2F%23..%2Fstore%2F%3A%3Ahash%3D934d7f%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
@@ -5350,23 +5477,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
+  checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
+  languageName: node
+  linkType: hard
+
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
@@ -5378,51 +5512,65 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252F..%25252Fpackages%25252Feditor%25252F%252523..%25252F..%25252Fpackages%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Da85cb9%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252F..%25252Fpackages%25252Feditor%25252F%252523..%25252F..%25252Fpackages%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D4f2333%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540file%2525253A..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%25252523..%2525252F..%2525252Fpackages%2525252Ftldraw%2525252F%2525253A%2525253Ahash%2525253Ddc6c31%25252526locator%2525253Dexamples.tldraw.com%2525252540workspace%252525253Aapps%252525252Fexamples"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
 
-"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema":
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D8b9c0b%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema"
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540file%25253A..%25252Feditor%25252F%252523..%25252Feditor%25252F%25253A%25253Ahash%25253Dce13ec%252526locator%25253D%25252540tldraw%2525252Ftldraw%25252540workspace%2525253Apackages%2525252Ftldraw"
+  checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
+  languageName: node
+  linkType: hard
+
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Ftlschema%2540file%253A..%252Ftlschema%252F%2523..%252Ftlschema%252F%253A%253Ahash%253D07a4bb%2526locator%253D%252540tldraw%25252Feditor%252540workspace%25253Apackages%25252Feditor"
+  checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
+  languageName: node
+  linkType: hard
+
+"@tldraw/utils@file:../utils/::locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/utils@file:../utils/#../utils/::hash=96026b&locator=%40tldraw%2Fvalidate%40file%3A..%2Fvalidate%2F%23..%2Fvalidate%2F%3A%3Ahash%3D1cf459%26locator%3D%2540tldraw%252Ftlschema%2540workspace%253Apackages%252Ftlschema"
   checksum: 0f5915dd0b980358097236b6a006763bf22ae413c7ab6a6a4c8c4347b07b0ad9dfe2e34a4809bd4552db12bd1b3a8cc5b065fcd490f6233a94f72f60dcd3ae1e
   languageName: node
   linkType: hard
@@ -5442,66 +5590,84 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@tldraw/validate@file:../validate/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
+"@tldraw/validate@file:../validate/::locator=%40tldraw%2Feditor%40file%3A..%2F..%2Fpackages%2Feditor%2F%23..%2F..%2Fpackages%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=8b9c0b&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
+  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=1cf459&locator=%40tldraw%2Feditor%40file%3A..%2F..%2Fpackages%2Feditor%2F%23..%2F..%2Fpackages%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3Dexamples.tldraw.com%2540workspace%253Aapps%252Fexamples"
   dependencies:
     "@tldraw/utils": "file:../utils/"
-  checksum: e7bcc52ab677ea68b423497a77a50ac2291685506d73c533b1171d0c35f3216676e5422ed09c750395642fe751d2b5fb0a8621cb7c56dfbe1d2a50984167cc64
+  checksum: 78f5f59046458c9ac2b8622b589dc122c4c4809a57ac5eac3e8fc3ed2bee9731ea35f80708066638a50b84002e6af096589a043fd39a5d7a0ae83c8957b1ca46
   languageName: node
   linkType: hard
 
-"@tldraw/validate@file:../validate/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw":
+"@tldraw/validate@file:../validate/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=8b9c0b&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Da85cb9%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw"
+  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=1cf459&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540file%253A..%252F..%252Fpackages%252Ftldraw%252F%2523..%252F..%252Fpackages%252Ftldraw%252F%253A%253Ahash%253Ddc6c31%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
   dependencies:
     "@tldraw/utils": "file:../utils/"
-  checksum: e7bcc52ab677ea68b423497a77a50ac2291685506d73c533b1171d0c35f3216676e5422ed09c750395642fe751d2b5fb0a8621cb7c56dfbe1d2a50984167cc64
+  checksum: 78f5f59046458c9ac2b8622b589dc122c4c4809a57ac5eac3e8fc3ed2bee9731ea35f80708066638a50b84002e6af096589a043fd39a5d7a0ae83c8957b1ca46
+  languageName: node
+  linkType: hard
+
+"@tldraw/validate@file:../validate/::locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=1cf459&locator=%40tldraw%2Feditor%40file%3A..%2Feditor%2F%23..%2Feditor%2F%3A%3Ahash%3Dce13ec%26locator%3D%2540tldraw%252Ftldraw%2540workspace%253Apackages%252Ftldraw"
+  dependencies:
+    "@tldraw/utils": "file:../utils/"
+  checksum: 78f5f59046458c9ac2b8622b589dc122c4c4809a57ac5eac3e8fc3ed2bee9731ea35f80708066638a50b84002e6af096589a043fd39a5d7a0ae83c8957b1ca46
   languageName: node
   linkType: hard
 
 "@tldraw/validate@file:../validate/::locator=%40tldraw%2Feditor%40workspace%3Apackages%2Feditor":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=8b9c0b&locator=%40tldraw%2Feditor%40workspace%3Apackages%2Feditor"
+  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=1cf459&locator=%40tldraw%2Feditor%40workspace%3Apackages%2Feditor"
   dependencies:
     "@tldraw/utils": "file:../utils/"
-  checksum: e7bcc52ab677ea68b423497a77a50ac2291685506d73c533b1171d0c35f3216676e5422ed09c750395642fe751d2b5fb0a8621cb7c56dfbe1d2a50984167cc64
+  checksum: 78f5f59046458c9ac2b8622b589dc122c4c4809a57ac5eac3e8fc3ed2bee9731ea35f80708066638a50b84002e6af096589a043fd39a5d7a0ae83c8957b1ca46
   languageName: node
   linkType: hard
 
-"@tldraw/validate@file:../validate/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
+"@tldraw/validate@file:../validate/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=8b9c0b&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
+  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=1cf459&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252F..%252Fpackages%252Feditor%252F%2523..%252F..%252Fpackages%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253Dexamples.tldraw.com%252540workspace%25253Aapps%25252Fexamples"
   dependencies:
     "@tldraw/utils": "file:../utils/"
-  checksum: e7bcc52ab677ea68b423497a77a50ac2291685506d73c533b1171d0c35f3216676e5422ed09c750395642fe751d2b5fb0a8621cb7c56dfbe1d2a50984167cc64
+  checksum: 78f5f59046458c9ac2b8622b589dc122c4c4809a57ac5eac3e8fc3ed2bee9731ea35f80708066638a50b84002e6af096589a043fd39a5d7a0ae83c8957b1ca46
   languageName: node
   linkType: hard
 
-"@tldraw/validate@file:../validate/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
+"@tldraw/validate@file:../validate/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=8b9c0b&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Da85cb9%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
+  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=1cf459&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540file%25253A..%25252F..%25252Fpackages%25252Ftldraw%25252F%252523..%25252F..%25252Fpackages%25252Ftldraw%25252F%25253A%25253Ahash%25253Ddc6c31%252526locator%25253Dexamples.tldraw.com%25252540workspace%2525253Aapps%2525252Fexamples"
   dependencies:
     "@tldraw/utils": "file:../utils/"
-  checksum: e7bcc52ab677ea68b423497a77a50ac2291685506d73c533b1171d0c35f3216676e5422ed09c750395642fe751d2b5fb0a8621cb7c56dfbe1d2a50984167cc64
+  checksum: 78f5f59046458c9ac2b8622b589dc122c4c4809a57ac5eac3e8fc3ed2bee9731ea35f80708066638a50b84002e6af096589a043fd39a5d7a0ae83c8957b1ca46
   languageName: node
   linkType: hard
 
-"@tldraw/validate@file:../validate/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
+"@tldraw/validate@file:../validate/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=8b9c0b&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D4f2333%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
+  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=1cf459&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540file%253A..%252Feditor%252F%2523..%252Feditor%252F%253A%253Ahash%253Dce13ec%2526locator%253D%252540tldraw%25252Ftldraw%252540workspace%25253Apackages%25252Ftldraw"
   dependencies:
     "@tldraw/utils": "file:../utils/"
-  checksum: e7bcc52ab677ea68b423497a77a50ac2291685506d73c533b1171d0c35f3216676e5422ed09c750395642fe751d2b5fb0a8621cb7c56dfbe1d2a50984167cc64
+  checksum: 78f5f59046458c9ac2b8622b589dc122c4c4809a57ac5eac3e8fc3ed2bee9731ea35f80708066638a50b84002e6af096589a043fd39a5d7a0ae83c8957b1ca46
+  languageName: node
+  linkType: hard
+
+"@tldraw/validate@file:../validate/::locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor":
+  version: 2.0.0-alpha.19
+  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=1cf459&locator=%40tldraw%2Ftlschema%40file%3A..%2Ftlschema%2F%23..%2Ftlschema%2F%3A%3Ahash%3D07a4bb%26locator%3D%2540tldraw%252Feditor%2540workspace%253Apackages%252Feditor"
+  dependencies:
+    "@tldraw/utils": "file:../utils/"
+  checksum: 78f5f59046458c9ac2b8622b589dc122c4c4809a57ac5eac3e8fc3ed2bee9731ea35f80708066638a50b84002e6af096589a043fd39a5d7a0ae83c8957b1ca46
   languageName: node
   linkType: hard
 
 "@tldraw/validate@file:../validate/::locator=%40tldraw%2Ftlschema%40workspace%3Apackages%2Ftlschema":
   version: 2.0.0-alpha.19
-  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=8b9c0b&locator=%40tldraw%2Ftlschema%40workspace%3Apackages%2Ftlschema"
+  resolution: "@tldraw/validate@file:../validate/#../validate/::hash=1cf459&locator=%40tldraw%2Ftlschema%40workspace%3Apackages%2Ftlschema"
   dependencies:
     "@tldraw/utils": "file:../utils/"
-  checksum: e7bcc52ab677ea68b423497a77a50ac2291685506d73c533b1171d0c35f3216676e5422ed09c750395642fe751d2b5fb0a8621cb7c56dfbe1d2a50984167cc64
+  checksum: 78f5f59046458c9ac2b8622b589dc122c4c4809a57ac5eac3e8fc3ed2bee9731ea35f80708066638a50b84002e6af096589a043fd39a5d7a0ae83c8957b1ca46
   languageName: node
   linkType: hard
 
@@ -10182,7 +10348,9 @@ __metadata:
     "@babel/plugin-proposal-decorators": ^7.21.0
     "@playwright/test": ^1.38.1
     "@tldraw/assets": "file:../../packages/assets/"
+    "@tldraw/editor": "file:../../packages/editor/"
     "@tldraw/tldraw": "file:../../packages/tldraw/"
+    "@tldraw/utils": "file:../../packages/utils/"
     "@vercel/analytics": ^1.0.1
     "@vitejs/plugin-react": ^4.2.0
     dotenv: ^16.0.3
